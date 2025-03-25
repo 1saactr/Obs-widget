@@ -378,20 +378,20 @@ function hexToBase64(hexstring) {
 // This function sets the visibility of the Streamer.bot status label on the overlay
 function SetConnectionStatus(connected) {
 	let statusContainer = document.getElementById("estadoConexion");
-	
+	let contenedor = document.getElementById("contenedorPrincipal");
+
 	if (connected) {
 		statusContainer.style.background = "#2FB774";
 		statusContainer.innerText = "Connected!";
-		mainContainer.style.visibility = `visible`;
+		contenedor.style.visibility = `visible`;
+
 		var tl = new TimelineMax();
-		tl
-			.to(statusContainer, 2, { opacity: 0, ease: Linear.easeNone });
-	}
-	else {
+		tl.to(statusContainer, 2, { opacity: 0, ease: Linear.easeNone });
+	} else {
 		statusContainer.style.background = "#D12025";
 		statusContainer.innerText = "Connecting...";
 		statusContainer.style.opacity = 1;
-		mainContainer.style.visibility = `hidden`;
+		contenedor.style.visibility = `hidden`;
 	}
 }
 

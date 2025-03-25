@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div id="estadoConexion">Conectando...</div>
+
+	<div id="contenedorPrincipal">
+
+		<!-- Información del stream -->
+		<div id="infoStream">
+			<label id="plataforma"></label>
+			<label>•</label>
+			<label id="tiempoStream"></label>
+			<label>•</label>
+			<label id="bitrateStream"></label>
+		</div>
+
+		<!-- Perfil activo -->
+		<div id="barraPerfil">
+			<div id="nombrePerfil"></div>
+		</div>
+
+		<!-- Información de grabación -->
+		<div id="infoGrabacion">
+			<label id="tamanoArchivo"></label>
+			<label>•</label>
+			<label id="tiempoGrabacion"></label>
+			<label>•</label>
+			<label id="estadoGrabacion"></label>
+		</div>
+
+		<!-- Estadísticas -->
+		<div id="estadisticas">
+			<div id="statsBasicos"></div>
+			<div id="statsAvanzados"></div>
+		</div>
+
+		<!-- Volumen -->
+		<div id="contenedorVolumen">
+			<div class="barraVolumen">
+				<div class="nivelVolumen" id="volumenIzquierdo"></div>
+				<div class="etiquetaVolumen">L</div>
+			</div>
+			<div class="barraVolumen">
+				<div class="nivelVolumen" id="volumenDerecho"></div>
+				<div class="etiquetaVolumen">R</div>
+			</div>
+		</div>
+
+		<!-- FPS -->
+		<div id="contenedorFPS">
+			<div id="medidorFPS"></div>
+			<div id="etiquetaFPS">
+				FPS <label id="valorFPS"></label>
+			</div>
+		</div>
+
+		<!-- Micrófono muteado -->
+		<img id="iconoMicrofono" src="assets/mic-icon-muted.png">
+
+	</div>
+
+	<!-- Anillos de estado -->
+	<div id="anilloStream">
+		<div class="borde" id="streamIzq"></div>
+		<div class="borde" id="streamDer"></div>
+		<div class="borde" id="streamArriba"></div>
+		<div class="borde" id="streamAbajo"></div>
+	</div>
+
+	<div id="anilloGrabacion">
+		<div class="borde" id="grabarIzq"></div>
+		<div class="borde" id="grabarDer"></div>
+		<div class="borde" id="grabarArriba"></div>
+		<div class="borde" id="grabarAbajo"></div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+	<script src="script/script.js"></script>
+</body>
+</html>

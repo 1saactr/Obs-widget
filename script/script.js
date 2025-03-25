@@ -72,6 +72,7 @@ function connectws() {
 							let eventData = data.d.eventData;
 							eventData.inputs.forEach((input) => {
 								if (input.inputName == obsMicInput) {
+									console.log("🔊 Niveles recibidos:", input.inputLevelsMul);
 									if (input.inputLevelsMul.length == 0) {
 										document.getElementById("contenedorVolumen").style.visibility = `hidden`;
 									}

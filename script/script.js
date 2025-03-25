@@ -13,6 +13,7 @@ const background = urlParams.get("background") || "";
 
 if (obsMicInput != "")
 	document.getElementById("contenedorVolumen").style.visibility = "visible";
+console.log("Micrófono detectado:", obsMicInput);
 
 
 let ws = new WebSocket("ws://" + obsServerAddress + ":" + obsServerPort + "/");
